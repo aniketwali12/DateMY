@@ -50,10 +50,10 @@ public class Datemonthyear {
                  if(dayBetween<0 || years<0 || tmonths<0){
                      throw new ArithmeticException("Date is yet to come");
                        }
-                 else{
-                     System.out.println("u have lived "+ dayBetween+" days ");
-                     System.out.println("u have lived " + tmonths+" months");
-                     System.out.println("u have lived "+ years+" years "  );            
+                 else{                                     
+                      System.out.println("u have lived "+ years+" years "  );    
+                      System.out.println("u have lived " + tmonths+" months");
+                      System.out.println("u have lived "+ dayBetween+" days ");
                 }
            }     
             catch(ArithmeticException e){
