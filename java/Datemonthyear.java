@@ -1,4 +1,3 @@
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
@@ -7,7 +6,7 @@ import java.time.Period;
 import static java.time.temporal.ChronoUnit.DAYS;
 import java.util.Date;
 
-public class Datemonthyear {
+public class datetime {
     public static void main(String[] args) throws ParseException {
         Scanner c = new Scanner(System.in);
           System.out.println("Enter your birth date in dd-mm-yyyy format");
@@ -20,12 +19,11 @@ public class Datemonthyear {
                }
                else{
        char[] c1=s.toCharArray();
-       
-       int da=(c1[0]-48)*10+(c1[1]-48);
+        int da=(c1[0]-'0')*10+(c1[1]-'0');
          
-       int mo=(c1[3]-48)*10+(c1[4]-48);
+       int mo=(c1[3]-'0')*10+(c1[4]-'0');
            
-       int y=(c1[6]-48)*1000+(c1[7]-48)*100+(c1[8]-48)*10+(c1[9]-48);
+       int y=(c1[6]-'0')*1000+(c1[7]-'0')*100+(c1[8]-'0')*10+(c1[9]-'0');
        try{
          if(y<0022){
              throw new ArithmeticException("U cannot live for more 2000 years");
@@ -53,6 +51,7 @@ public class Datemonthyear {
                  else{                                     
                       System.out.println("u have lived "+ years+" years "  );    
                       System.out.println("u have lived " + tmonths+" months");
+                      System.out.println("u have lived "+ dayBetween/7+" weeks ");
                       System.out.println("u have lived "+ dayBetween+" days ");
                 }
            }     
